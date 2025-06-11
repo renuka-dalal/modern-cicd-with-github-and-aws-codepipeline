@@ -105,7 +105,9 @@ Resources:
       EvaluationPeriods: 1
       Threshold: 4 # 80% of 5 ReadCapacityUnits
       ComparisonOperator: "GreaterThanThreshold"
-
+  AppRunnerServiceUrl:
+    Description: "URL of the App Runner Service"
+    Value: !GetAtt AppRunnerService.ServiceUrl  
 Outputs:
   DynamoDBTableName:
     Description: "Name of the DynamoDB Table"
